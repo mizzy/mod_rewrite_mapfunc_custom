@@ -1,0 +1,13 @@
+builddir=.
+top_builddir=/usr/lib64/httpd
+include /usr/lib64/httpd/build/special.mk
+
+APXS=@APXS@
+
+all: local-shared-build
+
+install: install-modules-yes
+
+clean:
+	-rm -f mod_rewrite_mapfunc_custom.o mod_rewrite_mapfunc_custom.lo mod_rewrite_mapfunc_custom.slo mod_rewrite_mapfunc_custom.la 
+
