@@ -25,7 +25,7 @@ static int pre_config(apr_pool_t *pconf,
     /* register int: rewritemap handlers */
     map_pfn_register = APR_RETRIEVE_OPTIONAL_FN(ap_register_rewrite_mapfunc);
     if (map_pfn_register) {
-        map_pfn_register("db", rewrite_mapfunc_custom);
+        map_pfn_register("custom", rewrite_mapfunc_custom);
     }
     return OK;
 }
